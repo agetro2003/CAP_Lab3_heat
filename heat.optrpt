@@ -1,0 +1,1950 @@
+Begin optimization report for: stbi_flip_vertically_on_write
+=================================================================
+
+Begin optimization report for: stbi_write_bmp_to_func
+=================================================================
+
+Begin optimization report for: stbiw__outfile
+
+LOOP BEGIN at ./stb_image_write.h (399, 4)
+
+    LOOP BEGIN at ./stb_image_write.h (400, 7)
+    LOOP END
+LOOP END
+=================================================================
+
+Begin optimization report for: stbiw__writefv
+
+LOOP BEGIN at ./stb_image_write.h (303, 4)
+LOOP END
+=================================================================
+
+Begin optimization report for: stbiw__write_pixel
+
+LOOP BEGIN at ./stb_image_write.h (369, 13)
+    remark #25436: Loop completely unrolled by 3
+LOOP END
+=================================================================
+
+Begin optimization report for: stbi_write_bmp
+=================================================================
+
+Begin optimization report for: stbi__stdio_write
+=================================================================
+
+Begin optimization report for: stbi_write_tga_to_func
+=================================================================
+
+Begin optimization report for: stbi_write_tga_core
+
+LOOP BEGIN at ./stb_image_write.h (478, 7)
+
+    LOOP BEGIN at ./stb_image_write.h (482, 10)
+
+        LOOP BEGIN at ./stb_image_write.h (492, 19)
+            remark #25530: Stmt at line 495 sinked after loop using last value computation
+            remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it meets search loop idiom criteria
+        LOOP END
+
+        LOOP BEGIN at ./stb_image_write.h (515, 16)
+        LOOP END
+
+        LOOP BEGIN at ./stb_image_write.h (502, 19)
+            remark #25530: Stmt at line 504 sinked after loop using last value computation
+            remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it meets search loop idiom criteria
+        LOOP END
+    LOOP END
+LOOP END
+=================================================================
+
+Begin optimization report for: stbiw__writef
+=================================================================
+
+Begin optimization report for: stbi_write_tga
+=================================================================
+
+Begin optimization report for: stbiw__linear_to_rgbe
+=================================================================
+
+Begin optimization report for: stbiw__write_run_data
+=================================================================
+
+Begin optimization report for: stbiw__write_dump_data
+=================================================================
+
+Begin optimization report for: stbiw__write_hdr_scanline
+
+LOOP BEGIN at ./stb_image_write.h (617, 7)
+<Predicate Optimized v2>
+    remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+    remark #15346: vector dependence: assumed OUTPUT dependence
+    remark #15346: vector dependence: assumed ANTI dependence
+    remark #15346: vector dependence: assumed ANTI dependence
+    remark #15346: vector dependence: assumed OUTPUT dependence
+    remark #15346: vector dependence: assumed OUTPUT dependence
+    remark #15346: vector dependence: assumed FLOW dependence
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (629, 10) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (625, 57) ] 
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (630, 10) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (625, 57) ] 
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (631, 10) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (625, 57) ] 
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (632, 10) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (625, 57) ] 
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (617, 7)
+<Predicate Optimized v1>
+    remark #25423: Invariant If condition at line 618 hoisted out of this loop
+    remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+    remark #15346: vector dependence: assumed OUTPUT dependence
+    remark #15346: vector dependence: assumed ANTI dependence
+    remark #15346: vector dependence: assumed ANTI dependence
+    remark #15346: vector dependence: assumed OUTPUT dependence
+    remark #15346: vector dependence: assumed OUTPUT dependence
+    remark #15346: vector dependence: assumed FLOW dependence
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (629, 10) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (620, 33) ] 
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (629, 10) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (621, 33) ] 
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (629, 10) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (622, 33) ] 
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (630, 10) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (620, 33) ] 
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (638, 7)
+
+    LOOP BEGIN at ./stb_image_write.h (642, 10)
+
+        LOOP BEGIN at ./stb_image_write.h (645, 13)
+            remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it meets search loop idiom criteria
+            remark #25439: Loop unrolled with remainder by 4
+        LOOP END
+
+        LOOP BEGIN at ./stb_image_write.h (645, 13)
+        <Remainder loop>
+        LOOP END
+
+        LOOP BEGIN at ./stb_image_write.h (653, 13)
+        LOOP END
+
+        LOOP BEGIN at ./stb_image_write.h (662, 16)
+            remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it meets search loop idiom criteria
+        LOOP END
+
+        LOOP BEGIN at ./stb_image_write.h (665, 16)
+        LOOP END
+    LOOP END
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (600, 7)
+LOOP END
+=================================================================
+
+Begin optimization report for: stbi_write_hdr_to_func
+=================================================================
+
+Begin optimization report for: stbi_write_hdr_core
+
+LOOP BEGIN at ./stb_image_write.h (696, 7)
+LOOP END
+=================================================================
+
+Begin optimization report for: stbi_write_hdr
+=================================================================
+
+Begin optimization report for: stbi_zlib_compress
+
+LOOP BEGIN at ./stb_image_write.h (769, 4)
+    remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (770, 24) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (770, 24) ] 
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (771, 12) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (770, 24) ] 
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (771, 12) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (771, 12) ] 
+    remark #25436: Loop completely unrolled by 8
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (769, 4)
+    remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (770, 24) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (770, 24) ] 
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (771, 12) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (770, 24) ] 
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (771, 12) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (771, 12) ] 
+    remark #25436: Loop completely unrolled by 7
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (769, 4)
+    remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (770, 24) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (770, 24) ] 
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (771, 12) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (770, 24) ] 
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (771, 12) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (771, 12) ] 
+    remark #25436: Loop completely unrolled by 5
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (769, 4)
+    remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (770, 24) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (770, 24) ] 
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (771, 12) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (770, 24) ] 
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (771, 12) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (771, 12) ] 
+    remark #25436: Loop completely unrolled by 9
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (769, 4)
+    remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (770, 24) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (770, 24) ] 
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (771, 12) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (770, 24) ] 
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (771, 12) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (771, 12) ] 
+    remark #25436: Loop completely unrolled by 8
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (839, 4)
+
+    LOOP BEGIN at ./stb_image_write.h (845, 7)
+        remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+        LOOP BEGIN at ./stb_image_write.h (779, 4)
+            remark #25530: Stmt at line 779 sinked after loop using last value computation
+            remark #25530: Stmt at line 0 sinked after loop using last value computation
+            remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it meets search loop idiom criteria
+        LOOP END
+    LOOP END
+
+    LOOP BEGIN at ./stb_image_write.h (863, 10)
+
+        LOOP BEGIN at ./stb_image_write.h (779, 4)
+            remark #25530: Stmt at line 779 sinked after loop using last value computation
+            remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it meets search loop idiom criteria
+        LOOP END
+    LOOP END
+
+    LOOP BEGIN at ./stb_image_write.h (877, 10)
+        remark #15521: Loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+    LOOP END
+
+    LOOP BEGIN at ./stb_image_write.h (758, 4)
+        remark #25530: Stmt at line 761 sinked after loop using last value computation
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (749, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (749, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed OUTPUT dependence
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (751, 24) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (751, 24) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed OUTPUT dependence
+        remark #15346: vector dependence: assumed FLOW dependence
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (750, 34) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (750, 34) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence
+    LOOP END
+
+    LOOP BEGIN at ./stb_image_write.h (758, 4)
+        remark #25530: Stmt at line 761 sinked after loop using last value computation
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (749, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (749, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed OUTPUT dependence
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (751, 24) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (751, 24) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed OUTPUT dependence
+        remark #15346: vector dependence: assumed FLOW dependence
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (750, 34) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (750, 34) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence
+    LOOP END
+
+    LOOP BEGIN at ./stb_image_write.h (758, 4)
+        remark #25530: Stmt at line 761 sinked after loop using last value computation
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (749, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (749, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed OUTPUT dependence
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (751, 24) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (751, 24) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed OUTPUT dependence
+        remark #15346: vector dependence: assumed FLOW dependence
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (750, 34) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (750, 34) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence
+    LOOP END
+
+    LOOP BEGIN at ./stb_image_write.h (880, 10)
+        remark #15521: Loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+    LOOP END
+
+    LOOP BEGIN at ./stb_image_write.h (758, 4)
+        remark #25530: Stmt at line 761 sinked after loop using last value computation
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (749, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (749, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed OUTPUT dependence
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (751, 24) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (751, 24) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed OUTPUT dependence
+        remark #15346: vector dependence: assumed FLOW dependence
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (750, 34) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (750, 34) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence
+    LOOP END
+
+    LOOP BEGIN at ./stb_image_write.h (758, 4)
+        remark #25530: Stmt at line 761 sinked after loop using last value computation
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (749, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (749, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed OUTPUT dependence
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (751, 24) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (751, 24) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed OUTPUT dependence
+        remark #15346: vector dependence: assumed FLOW dependence
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (750, 34) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (750, 34) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence
+    LOOP END
+
+    LOOP BEGIN at ./stb_image_write.h (758, 4)
+        remark #25530: Stmt at line 761 sinked after loop using last value computation
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (749, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (749, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed OUTPUT dependence
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (751, 24) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (751, 24) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed OUTPUT dependence
+        remark #15346: vector dependence: assumed FLOW dependence
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (750, 34) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (750, 34) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence
+    LOOP END
+
+    LOOP BEGIN at ./stb_image_write.h (758, 4)
+        remark #25530: Stmt at line 761 sinked after loop using last value computation
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (749, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (749, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed OUTPUT dependence
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (751, 24) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (751, 24) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed OUTPUT dependence
+        remark #15346: vector dependence: assumed FLOW dependence
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (750, 34) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (750, 34) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence
+    LOOP END
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (890, 4)
+    remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at ./stb_image_write.h (769, 4)
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (770, 24) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (770, 24) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (771, 12) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (770, 24) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (771, 12) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (771, 12) ] 
+        remark #25436: Loop completely unrolled by 8
+    LOOP END
+
+    LOOP BEGIN at ./stb_image_write.h (758, 4)
+        remark #25530: Stmt at line 761 sinked after loop using last value computation
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (749, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (749, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed OUTPUT dependence
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (751, 24) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (751, 24) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed OUTPUT dependence
+        remark #15346: vector dependence: assumed FLOW dependence
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (750, 34) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (750, 34) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence
+    LOOP END
+
+    LOOP BEGIN at ./stb_image_write.h (758, 4)
+        remark #25530: Stmt at line 761 sinked after loop using last value computation
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (749, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (749, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed OUTPUT dependence
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (751, 24) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (751, 24) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed OUTPUT dependence
+        remark #15346: vector dependence: assumed FLOW dependence
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (750, 34) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (750, 34) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence
+    LOOP END
+
+    LOOP BEGIN at ./stb_image_write.h (769, 4)
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (770, 24) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (770, 24) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (771, 12) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (770, 24) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (771, 12) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (771, 12) ] 
+        remark #25436: Loop completely unrolled by 9
+    LOOP END
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (758, 4)
+    remark #25530: Stmt at line 761 sinked after loop using last value computation
+    remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (749, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (749, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+    remark #15346: vector dependence: assumed OUTPUT dependence
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (751, 24) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (751, 24) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+    remark #15346: vector dependence: assumed OUTPUT dependence
+    remark #15346: vector dependence: assumed FLOW dependence
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (750, 34) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (750, 34) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+    remark #15346: vector dependence: assumed FLOW dependence
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (894, 4)
+
+    LOOP BEGIN at ./stb_image_write.h (758, 4)
+        remark #25530: Stmt at line 761 sinked after loop using last value computation
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (749, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (749, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed OUTPUT dependence
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (751, 24) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (751, 24) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed OUTPUT dependence
+        remark #15346: vector dependence: assumed FLOW dependence
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (750, 34) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (750, 34) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (759, 7) ] 
+        remark #15346: vector dependence: assumed FLOW dependence
+    LOOP END
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (897, 4)
+    remark #15527: Loop was not vectorized: function call to  cannot be vectorized
+    remark #25438: Loop unrolled without remainder by 8
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (906, 7)
+
+    LOOP BEGIN at ./stb_image_write.h (907, 10)
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (907, 42) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (907, 42) ] 
+        remark #25439: Loop unrolled with remainder by 8
+    LOOP END
+
+    LOOP BEGIN at ./stb_image_write.h (907, 10)
+    <Remainder loop>
+    LOOP END
+LOOP END
+=================================================================
+
+Begin optimization report for: stbi_write_png_to_mem
+
+LOOP BEGIN at ./stb_image_write.h (964, 4)
+    remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (965, 24) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (965, 46) ] 
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (965, 24) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (965, 24) ] 
+    remark #25436: Loop completely unrolled by 17
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (964, 4)
+    remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (965, 24) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (965, 46) ] 
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (965, 24) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (965, 24) ] 
+    remark #25436: Loop completely unrolled by 4
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (1039, 4)
+
+    LOOP BEGIN at ./stb_image_write.h (1046, 10)
+
+        LOOP BEGIN at ./stb_image_write.h (1051, 13)
+            remark #15300: LOOP WAS VECTORIZED
+            remark #15305: vectorization support: vector length 16
+        LOOP END
+
+        LOOP BEGIN at ./stb_image_write.h (1051, 13)
+        <Remainder loop for vectorization>
+        LOOP END
+    LOOP END
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (964, 4)
+    remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (965, 24) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (965, 46) ] 
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (965, 24) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (965, 24) ] 
+    remark #25439: Loop unrolled with remainder by 8
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (964, 4)
+<Remainder loop>
+LOOP END
+=================================================================
+
+Begin optimization report for: stbiw__encode_png_line
+
+LOOP BEGIN at ./stb_image_write.h (997, 4)
+<Predicate Optimized v1>
+<Multiversioned v1>
+<Multiversioned v1>
+    remark #25424: Invariant Switch condition at line 998 hoisted out of this loop
+    remark #25228: Loop multiversioned for Data Dependence
+    remark #25399: memcopy generated
+    remark #25562: The loop has been multiversioned for the small trip count
+    remark #25260: Dead loop optimized away
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (1008, 4)
+<Predicate Optimized v1>
+<Multiversioned v1>
+<Multiversioned v1>
+    remark #25424: Invariant Switch condition at line 1009 hoisted out of this loop
+    remark #25228: Loop multiversioned for Data Dependence
+    remark #25399: memcopy generated
+    remark #25562: The loop has been multiversioned for the small trip count
+    remark #25260: Dead loop optimized away
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (997, 4)
+<Multiversioned v2>
+    remark #15319: Loop was not vectorized: novector directive used
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (997, 4)
+<Multiversioned v2>
+    remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (997, 4)
+<Predicate Optimized v6>
+    remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (1002, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (1002, 35) ] 
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (1002, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (1002, 43) ] 
+    remark #25439: Loop unrolled with remainder by 8
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (997, 4)
+<Remainder loop>
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (997, 4)
+<Predicate Optimized v7>
+<Multiversioned v1>
+<Multiversioned v1>
+    remark #25228: Loop multiversioned for Data Dependence
+    remark #25399: memcopy generated
+    remark #25562: The loop has been multiversioned for the small trip count
+    remark #25260: Dead loop optimized away
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (997, 4)
+<Predicate Optimized v8>
+    remark #25260: Dead loop optimized away
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (997, 4)
+<Multiversioned v2>
+    remark #15319: Loop was not vectorized: novector directive used
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (997, 4)
+<Multiversioned v2>
+    remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (997, 4)
+<Multiversioned v2>
+    remark #15319: Loop was not vectorized: novector directive used
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (997, 4)
+<Predicate Optimized v5>
+<Multiversioned v1>
+<Multiversioned v1>
+    remark #25228: Loop multiversioned for Data Dependence
+    remark #25399: memcopy generated
+    remark #25562: The loop has been multiversioned for the small trip count
+    remark #25260: Dead loop optimized away
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (997, 4)
+<Multiversioned v2>
+    remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (997, 4)
+<Predicate Optimized v3>
+    remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (1003, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (1003, 50) ] 
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (1003, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (1003, 72) ] 
+    remark #25439: Loop unrolled with remainder by 8
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (997, 4)
+<Remainder loop>
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (997, 4)
+<Predicate Optimized v4>
+<Multiversioned v1>
+<Multiversioned v1>
+    remark #25228: Loop multiversioned for Data Dependence
+    remark #25399: memcopy generated
+    remark #25562: The loop has been multiversioned for the small trip count
+    remark #25260: Dead loop optimized away
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (997, 4)
+<Predicate Optimized v2>
+    remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (1001, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (1001, 35) ] 
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (1001, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (1001, 42) ] 
+    remark #25439: Loop unrolled with remainder by 8
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (997, 4)
+<Remainder loop>
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (997, 4)
+<Multiversioned v2>
+    remark #15319: Loop was not vectorized: novector directive used
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (997, 4)
+<Multiversioned v2>
+    remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (1008, 4)
+<Predicate Optimized v7>
+    remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (1015, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (1015, 35) ] 
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (1015, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (1015, 43) ] 
+    remark #25439: Loop unrolled with remainder by 8
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (1008, 4)
+<Remainder loop>
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (1008, 4)
+<Predicate Optimized v8>
+    remark #25260: Dead loop optimized away
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (1008, 4)
+<Multiversioned v2>
+    remark #15319: Loop was not vectorized: novector directive used
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (1008, 4)
+<Predicate Optimized v6>
+<Multiversioned v1>
+    remark #25228: Loop multiversioned for Data Dependence
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 16
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (1008, 4)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (1008, 4)
+<Predicate Optimized v5>
+    remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (1011, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (1011, 35) ] 
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (1011, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (1011, 42) ] 
+    remark #25439: Loop unrolled with remainder by 8
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (1008, 4)
+<Remainder loop>
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (1008, 4)
+<Predicate Optimized v4>
+    remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (1016, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (1016, 35) ] 
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (1016, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (1016, 55) ] 
+    remark #25439: Loop unrolled with remainder by 8
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (1008, 4)
+<Remainder loop>
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (1008, 4)
+<Multiversioned v2>
+    remark #15319: Loop was not vectorized: novector directive used
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (1008, 4)
+<Predicate Optimized v3>
+<Multiversioned v1>
+    remark #25228: Loop multiversioned for Data Dependence
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (1008, 4)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (1008, 4)
+<Predicate Optimized v2>
+    remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (1012, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (1012, 35) ] 
+    remark #15346: vector dependence: assumed FLOW dependence between [ /home/jesus/cap/heat_lab3/./stb_image_write.h (1012, 18) ] and [ /home/jesus/cap/heat_lab3/./stb_image_write.h (1012, 42) ] 
+    remark #25439: Loop unrolled with remainder by 8
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (1008, 4)
+<Remainder loop>
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (1008, 4)
+<Multiversioned v2>
+    remark #15319: Loop was not vectorized: novector directive used
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (1008, 4)
+<Multiversioned v2>
+    remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+LOOP END
+=================================================================
+
+Begin optimization report for: stbi_write_png
+=================================================================
+
+Begin optimization report for: stbi_write_png_to_func
+=================================================================
+
+Begin optimization report for: stbi_write_jpg_to_func
+=================================================================
+
+Begin optimization report for: stbi_write_jpg_core
+
+LOOP BEGIN at ./stb_image_write.h (1381, 4)
+    remark #25436: Loop completely unrolled by 8
+
+    LOOP BEGIN at ./stb_image_write.h (1382, 7)
+        remark #25436: Loop completely unrolled by 8
+    LOOP END
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (1374, 4)
+    remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+    remark #25438: Loop unrolled without remainder by 4
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (1422, 7)
+
+    LOOP BEGIN at ./stb_image_write.h (1423, 10)
+
+        LOOP BEGIN at ./stb_image_write.h (1425, 13)
+            remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+            LOOP BEGIN at ./stb_image_write.h (1426, 16)
+                remark #15300: LOOP WAS VECTORIZED
+                remark #15305: vectorization support: vector length 4
+            LOOP END
+        LOOP END
+    LOOP END
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (1154, 4)
+LOOP END
+=================================================================
+
+Begin optimization report for: stbiw__jpg_processDU
+
+LOOP BEGIN at ./stb_image_write.h (1232, 4)
+    remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (1236, 4)
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (1240, 4)
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 16
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (1154, 4)
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (1154, 4)
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (1154, 4)
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (1259, 4)
+    remark #15520: loop was not vectorized: loop with multiple exits cannot be vectorized unless it meets search loop idiom criteria
+    remark #25439: Loop unrolled with remainder by 2
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (1259, 4)
+<Remainder loop>
+    remark #25436: Loop completely unrolled by 1
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (1266, 4)
+
+    LOOP BEGIN at ./stb_image_write.h (1270, 7)
+        remark #15521: Loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+    LOOP END
+
+    LOOP BEGIN at ./stb_image_write.h (1276, 10)
+
+        LOOP BEGIN at ./stb_image_write.h (1154, 4)
+        LOOP END
+    LOOP END
+
+    LOOP BEGIN at ./stb_image_write.h (1154, 4)
+    LOOP END
+
+    LOOP BEGIN at ./stb_image_write.h (1154, 4)
+    LOOP END
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (1154, 4)
+LOOP END
+
+LOOP BEGIN at ./stb_image_write.h (1154, 4)
+LOOP END
+=================================================================
+
+Begin optimization report for: stbi_write_jpg
+=================================================================
+
+Begin optimization report for: write_png
+
+LOOP BEGIN at heat.c (139, 2)
+    remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at heat.c (140, 3)
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed OUTPUT dependence
+        remark #15346: vector dependence: assumed ANTI dependence
+        remark #15346: vector dependence: assumed ANTI dependence
+        remark #15346: vector dependence: assumed OUTPUT dependence
+        remark #15346: vector dependence: assumed OUTPUT dependence
+        remark #15346: vector dependence: assumed FLOW dependence
+    LOOP END
+LOOP END
+=================================================================
+
+Begin optimization report for: main
+
+LOOP BEGIN at heat.c (60, 2)
+    remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+    remark #25439: Loop unrolled with remainder by 8
+LOOP END
+
+LOOP BEGIN at heat.c (60, 2)
+<Remainder loop>
+LOOP END
+
+LOOP BEGIN at heat.c (64, 2)
+    remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+    remark #25439: Loop unrolled with remainder by 8
+LOOP END
+
+LOOP BEGIN at heat.c (64, 2)
+<Remainder loop>
+LOOP END
+
+LOOP BEGIN at heat.c (184, 2)
+
+    LOOP BEGIN at heat.c (90, 5)
+
+        LOOP BEGIN at heat.c (91, 9)
+        LOOP END
+    LOOP END
+
+    LOOP BEGIN at heat.c (124, 5)
+        remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+        LOOP BEGIN at heat.c (125, 9)
+            remark #15300: LOOP WAS VECTORIZED
+            remark #15305: vectorization support: vector length 4
+        LOOP END
+
+        LOOP BEGIN at heat.c (125, 9)
+        <Remainder loop for vectorization>
+            remark #15439: remainder loop was vectorized (unmasked)
+            remark #15305: vectorization support: vector length 2
+            remark #25261: Single iteration loop optimized away
+        LOOP END
+    LOOP END
+LOOP END
+=================================================================
+
+---- Begin Inlining Report ----
+Option Values:
+  inline-threshold: 225
+  inlinehint-threshold: 325
+  inlinecold-threshold: 45
+  inlineoptsize-threshold: 15
+
+DEAD STATIC FUNC: colormap__clamp
+
+DEAD STATIC FUNC: colormap__lerp
+
+DEAD STATIC FUNC: colormap_rgb
+
+DEAD STATIC FUNC: colormap_rgbf
+
+DEAD STATIC FUNC: diff
+
+DEAD STATIC FUNC: idx
+
+DEAD STATIC FUNC: init
+
+DEAD STATIC FUNC: stbi__end_write_file
+
+DEAD STATIC FUNC: stbi__start_write_callbacks
+
+DEAD STATIC FUNC: stbi__start_write_file
+
+DEAD STATIC FUNC: stbi_write_bmp_core
+
+DEAD STATIC FUNC: stbiw__crc32
+
+DEAD STATIC FUNC: stbiw__jpg_DCT
+
+DEAD STATIC FUNC: stbiw__jpg_calcBits
+
+DEAD STATIC FUNC: stbiw__jpg_writeBits
+
+DEAD STATIC FUNC: stbiw__paeth
+
+DEAD STATIC FUNC: stbiw__putc
+
+DEAD STATIC FUNC: stbiw__sbgrowf
+
+DEAD STATIC FUNC: stbiw__wpcrc
+
+DEAD STATIC FUNC: stbiw__write3
+
+DEAD STATIC FUNC: stbiw__write_pixels
+
+DEAD STATIC FUNC: stbiw__zhash
+
+DEAD STATIC FUNC: stbiw__zlib_bitrev
+
+DEAD STATIC FUNC: stbiw__zlib_countm
+
+DEAD STATIC FUNC: stbiw__zlib_flushf
+
+DEAD STATIC FUNC: step
+
+COMPILE FUNC: stbi_flip_vertically_on_write
+
+COMPILE FUNC: stbiw__writefv
+
+COMPILE FUNC: stbiw__outfile
+   -> stbiw__writefv stb_image_write.h(415,7)
+   -> INLINE: stbiw__write_pixels stb_image_write.h(417,7)
+      -> stbiw__write_pixel stb_image_write.h(402,10)
+
+COMPILE FUNC: stbi_write_bmp_to_func
+   -> INLINE: stbi__start_write_callbacks stb_image_write.h(434,4)
+   -> INLINE: stbi_write_bmp_core stb_image_write.h(435,11)
+      -> stbiw__outfile stb_image_write.h(425,11)
+
+COMPILE FUNC: stbi__stdio_write
+
+COMPILE FUNC: stbi_write_bmp
+   -> INLINE: stbi__start_write_file stb_image_write.h(442,8)
+      -> INLINE: stbi__start_write_callbacks stb_image_write.h(287,4)
+   -> INLINE: stbi_write_bmp_core stb_image_write.h(443,15)
+      -> stbiw__outfile stb_image_write.h(425,11)
+   -> INLINE: stbi__end_write_file stb_image_write.h(444,7)
+
+COMPILE FUNC: stbiw__writef
+   -> stbiw__writefv stb_image_write.h(334,4)
+
+COMPILE FUNC: stbi_write_tga_core
+   -> stbiw__outfile stb_image_write.h(461,14)
+   -> stbiw__writef stb_image_write.h(467,7)
+   -> stbiw__write_pixel stb_image_write.h(516,19)
+   -> stbiw__write_pixel stb_image_write.h(521,16)
+
+COMPILE FUNC: stbi_write_tga_to_func
+   -> INLINE: stbi__start_write_callbacks stb_image_write.h(532,4)
+   -> stbi_write_tga_core stb_image_write.h(533,11)
+
+COMPILE FUNC: stbi_write_tga
+   -> INLINE: stbi__start_write_file stb_image_write.h(540,8)
+      -> INLINE: stbi__start_write_callbacks stb_image_write.h(287,4)
+   -> stbi_write_tga_core stb_image_write.h(541,15)
+   -> INLINE: stbi__end_write_file stb_image_write.h(542,7)
+
+COMPILE FUNC: stbiw__linear_to_rgbe
+
+COMPILE FUNC: stbiw__write_run_data
+
+COMPILE FUNC: stbiw__write_dump_data
+
+COMPILE FUNC: stbiw__write_hdr_scanline
+   -> INLINE: stbiw__linear_to_rgbe stb_image_write.h(611,10)
+   -> INLINE: stbiw__linear_to_rgbe stb_image_write.h(628,10)
+      -> DELETE: frexp stb_image_write.h(563,33)
+   -> INLINE: stbiw__write_dump_data stb_image_write.h(656,16)
+      -> DELETE: __assert_fail stb_image_write.h(583,4)
+   -> INLINE: stbiw__write_run_data stb_image_write.h(668,19)
+      -> DELETE: __assert_fail stb_image_write.h(575,4)
+
+COMPILE FUNC: stbi_write_hdr_core
+   -> stbiw__write_hdr_scanline stb_image_write.h(697,10)
+
+COMPILE FUNC: stbi_write_hdr_to_func
+   -> INLINE: stbi__start_write_callbacks stb_image_write.h(706,4)
+   -> stbi_write_hdr_core stb_image_write.h(707,11)
+
+COMPILE FUNC: stbi_write_hdr
+   -> INLINE: stbi__start_write_file stb_image_write.h(714,8)
+      -> INLINE: stbi__start_write_callbacks stb_image_write.h(287,4)
+   -> stbi_write_hdr_core stb_image_write.h(715,15)
+   -> INLINE: stbi__end_write_file stb_image_write.h(716,7)
+
+COMPILE FUNC: stbi_zlib_compress
+   -> INLINE: stbiw__sbgrowf stb_image_write.h(830,4)
+      -> DELETE: realloc stb_image_write.h(746,14)
+   -> INLINE: stbiw__sbgrowf stb_image_write.h(831,4)
+   -> INLINE: stbiw__zlib_flushf stb_image_write.h(832,4)
+      -> INLINE: stbiw__sbgrowf stb_image_write.h(759,7)
+         -> DELETE: realloc stb_image_write.h(746,14)
+         -> DELETE: __assert_fail stb_image_write.h(747,4)
+   -> INLINE: stbiw__zlib_flushf stb_image_write.h(833,4)
+      -> INLINE: stbiw__sbgrowf stb_image_write.h(759,7)
+         -> DELETE: realloc stb_image_write.h(746,14)
+         -> DELETE: __assert_fail stb_image_write.h(747,4)
+   -> INLINE: stbiw__zhash stb_image_write.h(841,15)
+   -> INLINE: stbiw__zlib_countm stb_image_write.h(847,21)
+   -> INLINE: stbiw__sbgrowf stb_image_write.h(856,7)
+   -> INLINE: stbiw__zhash stb_image_write.h(860,14)
+   -> INLINE: stbiw__zlib_countm stb_image_write.h(865,24)
+   -> INLINE: stbiw__zlib_bitrev stb_image_write.h(878,10)
+   -> INLINE: stbiw__zlib_flushf stb_image_write.h(878,10)
+      -> INLINE: stbiw__sbgrowf stb_image_write.h(759,7)
+   -> INLINE: stbiw__zlib_bitrev stb_image_write.h(878,10)
+   -> INLINE: stbiw__zlib_flushf stb_image_write.h(878,10)
+      -> INLINE: stbiw__sbgrowf stb_image_write.h(759,7)
+   -> INLINE: stbiw__zlib_flushf stb_image_write.h(879,27)
+      -> INLINE: stbiw__sbgrowf stb_image_write.h(759,7)
+   -> INLINE: stbiw__zlib_bitrev stb_image_write.h(881,10)
+   -> INLINE: stbiw__zlib_flushf stb_image_write.h(881,10)
+      -> INLINE: stbiw__sbgrowf stb_image_write.h(759,7)
+   -> INLINE: stbiw__zlib_flushf stb_image_write.h(882,25)
+      -> INLINE: stbiw__sbgrowf stb_image_write.h(759,7)
+   -> INLINE: stbiw__zlib_bitrev stb_image_write.h(885,10)
+   -> INLINE: stbiw__zlib_flushf stb_image_write.h(885,10)
+      -> INLINE: stbiw__sbgrowf stb_image_write.h(759,7)
+   -> INLINE: stbiw__zlib_bitrev stb_image_write.h(885,10)
+   -> INLINE: stbiw__zlib_flushf stb_image_write.h(885,10)
+      -> INLINE: stbiw__sbgrowf stb_image_write.h(759,7)
+   -> INLINE: stbiw__zlib_bitrev stb_image_write.h(891,7)
+   -> INLINE: stbiw__zlib_flushf stb_image_write.h(891,7)
+      -> INLINE: stbiw__sbgrowf stb_image_write.h(759,7)
+         -> DELETE: realloc stb_image_write.h(746,14)
+   -> INLINE: stbiw__zlib_bitrev stb_image_write.h(891,7)
+   -> INLINE: stbiw__zlib_flushf stb_image_write.h(891,7)
+      -> INLINE: stbiw__sbgrowf stb_image_write.h(759,7)
+         -> DELETE: realloc stb_image_write.h(746,14)
+   -> INLINE: stbiw__zlib_bitrev stb_image_write.h(892,4)
+   -> INLINE: stbiw__zlib_flushf stb_image_write.h(892,4)
+      -> INLINE: stbiw__sbgrowf stb_image_write.h(759,7)
+   -> INLINE: stbiw__zlib_flushf stb_image_write.h(895,7)
+      -> INLINE: stbiw__sbgrowf stb_image_write.h(759,7)
+   -> DELETE: free stb_image_write.h(898,14)
+   -> INLINE: stbiw__sbgrowf stb_image_write.h(912,7)
+   -> INLINE: stbiw__sbgrowf stb_image_write.h(913,7)
+   -> INLINE: stbiw__sbgrowf stb_image_write.h(914,7)
+   -> INLINE: stbiw__sbgrowf stb_image_write.h(915,7)
+
+COMPILE FUNC: stbiw__encode_png_line
+   -> INLINE: stbiw__paeth stb_image_write.h(1003,57)
+   -> INLINE: stbiw__paeth stb_image_write.h(1014,42)
+   -> INLINE: stbiw__paeth stb_image_write.h(1016,42)
+
+COMPILE FUNC: stbi_write_png_to_mem
+   -> DELETE: stbiw__encode_png_line stb_image_write.h(1043,10)
+   -> stbiw__encode_png_line stb_image_write.h(1047,13)
+   -> stbiw__encode_png_line stb_image_write.h(1060,13)
+   -> stbi_zlib_compress stb_image_write.h(1069,11)
+   -> INLINE: stbiw__wpcrc stb_image_write.h(1089,4)
+      -> INLINE: stbiw__crc32 stb_image_write.h(975,23)
+   -> INLINE: stbiw__wpcrc stb_image_write.h(1096,4)
+      -> INLINE: stbiw__crc32 stb_image_write.h(975,23)
+   -> INLINE: stbiw__wpcrc stb_image_write.h(1100,4)
+      -> INLINE: stbiw__crc32 stb_image_write.h(975,23)
+
+COMPILE FUNC: stbi_write_png
+   -> stbi_write_png_to_mem stb_image_write.h(1112,25)
+   -> DELETE: free stb_image_write.h(1120,14)
+
+COMPILE FUNC: stbi_write_png_to_func
+   -> stbi_write_png_to_mem stb_image_write.h(1131,25)
+
+COMPILE FUNC: stbiw__jpg_processDU
+   -> INLINE: stbiw__jpg_DCT stb_image_write.h(1233,7)
+   -> INLINE: stbiw__jpg_DCT stb_image_write.h(1237,7)
+   -> INLINE: stbiw__jpg_writeBits stb_image_write.h(1250,7)
+      -> INLINE: stbiw__putc stb_image_write.h(1156,7)
+      -> INLINE: stbiw__putc stb_image_write.h(1158,10)
+   -> INLINE: stbiw__jpg_calcBits stb_image_write.h(1253,7)
+   -> INLINE: stbiw__jpg_writeBits stb_image_write.h(1254,7)
+      -> INLINE: stbiw__putc stb_image_write.h(1156,7)
+      -> INLINE: stbiw__putc stb_image_write.h(1158,10)
+   -> INLINE: stbiw__jpg_writeBits stb_image_write.h(1255,7)
+      -> INLINE: stbiw__putc stb_image_write.h(1156,7)
+      -> INLINE: stbiw__putc stb_image_write.h(1158,10)
+   -> INLINE: stbiw__jpg_writeBits stb_image_write.h(1263,7)
+      -> INLINE: stbiw__putc stb_image_write.h(1156,7)
+      -> INLINE: stbiw__putc stb_image_write.h(1158,10)
+   -> INLINE: stbiw__jpg_writeBits stb_image_write.h(1277,13)
+      -> INLINE: stbiw__putc stb_image_write.h(1156,7)
+      -> INLINE: stbiw__putc stb_image_write.h(1158,10)
+   -> INLINE: stbiw__jpg_calcBits stb_image_write.h(1280,7)
+   -> INLINE: stbiw__jpg_writeBits stb_image_write.h(1281,7)
+      -> INLINE: stbiw__putc stb_image_write.h(1156,7)
+      -> INLINE: stbiw__putc stb_image_write.h(1158,10)
+   -> INLINE: stbiw__jpg_writeBits stb_image_write.h(1282,7)
+      -> INLINE: stbiw__putc stb_image_write.h(1156,7)
+      -> INLINE: stbiw__putc stb_image_write.h(1158,10)
+   -> INLINE: stbiw__jpg_writeBits stb_image_write.h(1285,7)
+      -> INLINE: stbiw__putc stb_image_write.h(1156,7)
+      -> INLINE: stbiw__putc stb_image_write.h(1158,10)
+
+COMPILE FUNC: stbi_write_jpg_core
+   -> INLINE: stbiw__putc stb_image_write.h(1396,7)
+   -> INLINE: stbiw__putc stb_image_write.h(1401,7)
+   -> INLINE: stbiw__putc stb_image_write.h(1404,7)
+   -> INLINE: stbiw__putc stb_image_write.h(1407,7)
+   -> stbiw__jpg_processDU stb_image_write.h(1445,19)
+   -> stbiw__jpg_processDU stb_image_write.h(1446,19)
+   -> stbiw__jpg_processDU stb_image_write.h(1447,19)
+   -> INLINE: stbiw__jpg_writeBits stb_image_write.h(1452,7)
+      -> INLINE: stbiw__putc stb_image_write.h(1156,7)
+      -> INLINE: stbiw__putc stb_image_write.h(1158,10)
+   -> INLINE: stbiw__putc stb_image_write.h(1456,4)
+   -> INLINE: stbiw__putc stb_image_write.h(1457,4)
+
+COMPILE FUNC: stbi_write_jpg_to_func
+   -> INLINE: stbi__start_write_callbacks stb_image_write.h(1465,4)
+   -> stbi_write_jpg_core stb_image_write.h(1466,11)
+
+COMPILE FUNC: stbi_write_jpg
+   -> INLINE: stbi__start_write_file stb_image_write.h(1474,8)
+      -> INLINE: stbi__start_write_callbacks stb_image_write.h(287,4)
+   -> stbi_write_jpg_core stb_image_write.h(1475,15)
+   -> INLINE: stbi__end_write_file stb_image_write.h(1476,7)
+
+COMPILE FUNC: write_png
+   -> stbi_write_png heat.c(146,2)
+   -> INLINE: idx heat.c(141,21)
+   -> INLINE: colormap_rgb heat.c(142,4)
+      -> INLINE: colormap_rgbf colormap.h(1114,5)
+         -> INLINE: colormap__clamp colormap.h(1097,21)
+         -> INLINE: colormap__lerp colormap.h(1106,10)
+         -> INLINE: colormap__lerp colormap.h(1107,10)
+         -> INLINE: colormap__lerp colormap.h(1108,10)
+
+COMPILE FUNC: main
+   -> DELETE: malloc heat.c(162,20)
+   -> INLINE: init heat.c(174,2)
+      -> INLINE: idx heat.c(57,9)
+      -> INLINE: idx heat.c(61,10)
+      -> INLINE: idx heat.c(62,10)
+      -> INLINE: idx heat.c(65,10)
+      -> INLINE: idx heat.c(66,10)
+   -> INLINE: idx heat.c(176,39)
+   -> write_png heat.c(225,2)
+   -> INLINE: step heat.c(200,3)
+      -> INLINE: idx heat.c(97,31)
+      -> INLINE: idx heat.c(98,31)
+      -> INLINE: idx heat.c(99,31)
+      -> INLINE: idx heat.c(100,31)
+      -> INLINE: idx heat.c(96,24)
+   -> INLINE: diff heat.c(201,25)
+      -> INLINE: idx heat.c(126,49)
+      -> INLINE: idx heat.c(126,73)
+
+COMPILE FUNC: stbiw__write_pixel
+   -> INLINE: stbiw__write3 stb_image_write.h(362,13)
+   -> INLINE: stbiw__write3 stb_image_write.h(371,13)
+   -> INLINE: stbiw__write3 stb_image_write.h(376,10)
+
+---- End Inlining Report ------
+Register allocation report for: stbi_flip_vertically_on_write
+FUNCTION BEGIN
+
+Hardware registers used
+ Reserved : 1 [ rip  ]
+ Available : 34 [ rax rbp rbx rcx rdx rsi r8 r9 r10 r11 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 0 [  ]
+ Assigned : 1 [ rdi  ]
+
+Routine stack 
+ Variables : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: stbi_write_bmp_to_func
+FUNCTION BEGIN
+
+Hardware registers used
+ Reserved : 2 [ rsp ssp  ]
+ Available : 27 [ rbp rbx r11 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 0 [  ]
+ Assigned : 9 [ eflags rax rcx rdi rdx rsi r8 r9 r10  ]
+
+Routine stack 
+ Variables : 16 Bytes
+   Read Count : 0
+   Write Count : 2
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: stbiw__outfile
+FUNCTION BEGIN
+ 1 reloads 6 spills 
+ LOOP1 BEGIN at (./stb_image_write.h:399:4 @[ ./stb_image_write.h:417:7 ])
+  8 reloads 2 spills 
+  LOOP2 BEGIN at (./stb_image_write.h:400:7 @[ ./stb_image_write.h:417:7 ])
+  LOOP2 END
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 3 [ rsp ssp rip  ]
+ Available : 14 [ r10 r11 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 4 [ rbp r14 r13 rbx  ]
+ Assigned : 22 [ eflags rax rbp rbx rcx rdi rdx rsi r8 r9 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7  ]
+
+Routine stack 
+ Variables : 281 Bytes
+   Read Count : 14
+   Write Count : 13
+ Spills : 56 Bytes
+   Read Count : 9
+   Write Count : 8
+
+FUNCTION END
+Register allocation report for: stbiw__writefv
+FUNCTION BEGIN
+ LOOP1 BEGIN at (./stb_image_write.h:303:4)
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 2 [ rsp ssp  ]
+ Available : 24 [ r8 r9 r10 r11 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 6 [ rbp rbx r12 r13 r14 r15  ]
+ Assigned : 12 [ eflags rax rbp rbx rcx rdi rdx rsi r12 r13 r14 r15  ]
+
+Routine stack 
+ Variables : 7 Bytes
+   Read Count : 0
+   Write Count : 3
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: stbiw__write_pixel
+FUNCTION BEGIN
+
+Hardware registers used
+ Reserved : 2 [ rsp ssp  ]
+ Available : 25 [ r9 r10 r11 r12 r13 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 3 [ r14 r15 rbx  ]
+ Assigned : 11 [ eflags rax rbp rbx rcx rdi rdx rsi r8 r14 r15  ]
+
+Routine stack 
+ Variables : 9 Bytes
+   Read Count : 0
+   Write Count : 9
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: stbi_write_bmp
+FUNCTION BEGIN
+
+Hardware registers used
+ Reserved : 2 [ rsp ssp  ]
+ Available : 23 [ r10 r11 r13 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 4 [ rbx r12 r15 r14  ]
+ Assigned : 13 [ eflags rax rbp rbx rcx rdi rdx rsi r8 r9 r12 r14 r15  ]
+
+Routine stack 
+ Variables : 16 Bytes
+   Read Count : 0
+   Write Count : 2
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: stbi__stdio_write
+FUNCTION BEGIN
+
+Hardware registers used
+ Reserved : 2 [ rsp ssp  ]
+ Available : 30 [ rbp rbx r8 r9 r10 r11 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 0 [  ]
+ Assigned : 5 [ rax rcx rdi rdx rsi  ]
+
+Routine stack 
+ Variables : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: stbi_write_tga_to_func
+FUNCTION BEGIN
+
+Hardware registers used
+ Reserved : 2 [ rsp ssp  ]
+ Available : 28 [ rbp rbx r10 r11 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 0 [  ]
+ Assigned : 8 [ eflags rax rcx rdi rdx rsi r8 r9  ]
+
+Routine stack 
+ Variables : 16 Bytes
+   Read Count : 0
+   Write Count : 2
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: stbi_write_tga_core
+FUNCTION BEGIN
+ 2 reloads 12 spills 
+ LOOP1 BEGIN at (./stb_image_write.h:478:7)
+  7 reloads 3 spills 
+  LOOP2 BEGIN at (./stb_image_write.h:482:10)
+   18 reloads 3 spills 
+   LOOP3 BEGIN at (./stb_image_write.h:492:19)
+    1 reloads 
+   LOOP3 END
+   LOOP3 BEGIN at (./stb_image_write.h:515:16)
+   LOOP3 END
+   LOOP3 BEGIN at (./stb_image_write.h:502:19)
+   LOOP3 END
+  LOOP2 END
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 3 [ rip rsp ssp  ]
+ Available : 20 [ zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 6 [ rbp rbx r12 r13 r14 r15  ]
+ Assigned : 16 [ eflags rax rbp rbx rcx rdi rdx rsi r8 r9 r10 r11 r12 r13 r14 r15  ]
+
+Routine stack 
+ Variables : 114 Bytes
+   Read Count : 28
+   Write Count : 21
+ Spills : 136 Bytes
+   Read Count : 28
+   Write Count : 18
+
+FUNCTION END
+Register allocation report for: stbiw__writef
+FUNCTION BEGIN
+
+Hardware registers used
+ Reserved : 2 [ rsp ssp  ]
+ Available : 20 [ rbp rbx r10 r11 r12 r13 r14 r15 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 0 [  ]
+ Assigned : 16 [ eflags rax rcx rdi rdx rsi r8 r9 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7  ]
+
+Routine stack 
+ Variables : 201 Bytes
+   Read Count : 0
+   Write Count : 8
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: stbi_write_tga
+FUNCTION BEGIN
+
+Hardware registers used
+ Reserved : 2 [ rsp ssp  ]
+ Available : 24 [ r9 r10 r11 r13 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 2 [ rbx r12  ]
+ Assigned : 12 [ eflags rax rbp rbx rcx rdi rdx rsi r8 r12 r14 r15  ]
+
+Routine stack 
+ Variables : 16 Bytes
+   Read Count : 0
+   Write Count : 2
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: stbiw__linear_to_rgbe
+FUNCTION BEGIN
+ 2 reloads 2 spills 
+
+Hardware registers used
+ Reserved : 4 [ mxcsr rip rsp ssp  ]
+ Available : 26 [ rbp rdx r8 r9 r10 r11 r12 r13 r15 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 2 [ r14 rbx  ]
+ Assigned : 10 [ eflags rax rbx rcx rdi rsi r14 zmm0 zmm1 zmm2  ]
+
+Routine stack 
+ Variables : 12 Bytes
+   Read Count : 3
+   Write Count : 2
+ Spills : 8 Bytes
+   Read Count : 2
+   Write Count : 2
+
+FUNCTION END
+Register allocation report for: stbiw__write_run_data
+FUNCTION BEGIN
+
+Hardware registers used
+ Reserved : 2 [ rsp ssp  ]
+ Available : 29 [ rbp r8 r9 r10 r11 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 1 [ rbx  ]
+ Assigned : 7 [ eflags rax rbx rcx rdi rdx rsi  ]
+
+Routine stack 
+ Variables : 2 Bytes
+   Read Count : 0
+   Write Count : 2
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: stbiw__write_dump_data
+FUNCTION BEGIN
+
+Hardware registers used
+ Reserved : 2 [ rsp ssp  ]
+ Available : 28 [ rax r8 r9 r10 r11 r12 r13 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 2 [ r14 rbx  ]
+ Assigned : 8 [ eflags rbp rbx rcx rdi rdx rsi r14  ]
+
+Routine stack 
+ Variables : 1 Bytes
+   Read Count : 0
+   Write Count : 1
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: stbiw__write_hdr_scanline
+FUNCTION BEGIN
+ 5 reloads 9 spills 
+ LOOP1 BEGIN at (./stb_image_write.h:600:7)
+  4 reloads 4 spills 
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:638:7)
+  4 reloads 4 spills 
+  LOOP2 BEGIN at (./stb_image_write.h:642:10)
+   6 reloads 
+   LOOP3 BEGIN at (./stb_image_write.h:645:13)
+   LOOP3 END
+   LOOP3 BEGIN at (./stb_image_write.h:645:13)
+   LOOP3 END
+   LOOP3 BEGIN at (./stb_image_write.h:653:13)
+    1 reloads 
+   LOOP3 END
+   LOOP3 BEGIN at (./stb_image_write.h:662:16)
+   LOOP3 END
+   LOOP3 BEGIN at (./stb_image_write.h:665:16)
+    1 reloads 
+   LOOP3 END
+  LOOP2 END
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:617:7)
+  7 reloads 4 spills 
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:617:7)
+  4 reloads 1 spills 
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 4 [ rip mxcsr rsp ssp  ]
+ Available : 14 [ zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 6 [ rbp rbx r12 r13 r14 r15  ]
+ Assigned : 22 [ eflags rax rbp rbx rcx rdi rdx rsi r8 r9 r10 r11 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5  ]
+
+Routine stack 
+ Variables : 84 Bytes
+   Read Count : 37
+   Write Count : 33
+ Spills : 140 Bytes
+   Read Count : 32
+   Write Count : 22
+
+FUNCTION END
+Register allocation report for: stbi_write_hdr_to_func
+FUNCTION BEGIN
+
+Hardware registers used
+ Reserved : 2 [ rsp ssp  ]
+ Available : 28 [ rbp rbx r10 r11 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 0 [  ]
+ Assigned : 8 [ eflags rax rcx rdi rdx rsi r8 r9  ]
+
+Routine stack 
+ Variables : 16 Bytes
+   Read Count : 0
+   Write Count : 2
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: stbi_write_hdr_core
+FUNCTION BEGIN
+ 1 reloads 2 spills 
+ LOOP1 BEGIN at (./stb_image_write.h:696:7)
+  2 reloads 
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 3 [ rsp ssp rip  ]
+ Available : 22 [ r9 r10 r11 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 4 [ rbx r12 r13 r15  ]
+ Assigned : 14 [ eflags rax rbp rbx rcx rdi rdx rsi r8 r12 r13 r14 r15 zmm0  ]
+
+Routine stack 
+ Variables : 206 Bytes
+   Read Count : 3
+   Write Count : 7
+ Spills : 12 Bytes
+   Read Count : 3
+   Write Count : 2
+
+FUNCTION END
+Register allocation report for: stbi_write_hdr
+FUNCTION BEGIN
+
+Hardware registers used
+ Reserved : 2 [ rsp ssp  ]
+ Available : 24 [ r9 r10 r11 r13 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 2 [ rbx r12  ]
+ Assigned : 12 [ eflags rax rbp rbx rcx rdi rdx rsi r8 r12 r14 r15  ]
+
+Routine stack 
+ Variables : 16 Bytes
+   Read Count : 0
+   Write Count : 2
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: stbi_zlib_compress
+FUNCTION BEGIN
+ 7 reloads 11 spills 
+ LOOP1 BEGIN at (./stb_image_write.h:897:4)
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:906:7)
+  1 reloads 
+  LOOP2 BEGIN at (./stb_image_write.h:907:10)
+  LOOP2 END
+  LOOP2 BEGIN at (./stb_image_write.h:907:10)
+  LOOP2 END
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:894:4)
+  LOOP2 BEGIN at (./stb_image_write.h:758:4 @[ ./stb_image_write.h:895:7 ])
+  LOOP2 END
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:758:4 @[ ./stb_image_write.h:892:4 ])
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:890:4)
+  6 reloads 2 spills 
+  LOOP2 BEGIN at (./stb_image_write.h:758:4 @[ ./stb_image_write.h:891:7 ])
+  LOOP2 END
+  LOOP2 BEGIN at (./stb_image_write.h:758:4 @[ ./stb_image_write.h:891:7 ])
+  LOOP2 END
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:839:4)
+  32 reloads 8 spills 
+  LOOP2 BEGIN at (./stb_image_write.h:845:7)
+   2 reloads 1 spills 
+   LOOP3 BEGIN at (./stb_image_write.h:779:4 @[ ./stb_image_write.h:847:21 ])
+   LOOP3 END
+  LOOP2 END
+  LOOP2 BEGIN at (./stb_image_write.h:863:10)
+   2 reloads 
+   LOOP3 BEGIN at (./stb_image_write.h:779:4 @[ ./stb_image_write.h:865:24 ])
+   LOOP3 END
+  LOOP2 END
+  LOOP2 BEGIN at (./stb_image_write.h:877:10)
+  LOOP2 END
+  LOOP2 BEGIN at (./stb_image_write.h:758:4 @[ ./stb_image_write.h:878:10 ])
+  LOOP2 END
+  LOOP2 BEGIN at (./stb_image_write.h:758:4 @[ ./stb_image_write.h:878:10 ])
+  LOOP2 END
+  LOOP2 BEGIN at (./stb_image_write.h:758:4 @[ ./stb_image_write.h:879:27 ])
+  LOOP2 END
+  LOOP2 BEGIN at (./stb_image_write.h:880:10)
+  LOOP2 END
+  LOOP2 BEGIN at (./stb_image_write.h:758:4 @[ ./stb_image_write.h:881:10 ])
+  LOOP2 END
+  LOOP2 BEGIN at (./stb_image_write.h:758:4 @[ ./stb_image_write.h:882:25 ])
+  LOOP2 END
+  LOOP2 BEGIN at (./stb_image_write.h:758:4 @[ ./stb_image_write.h:885:10 ])
+  LOOP2 END
+  LOOP2 BEGIN at (./stb_image_write.h:758:4 @[ ./stb_image_write.h:885:10 ])
+  LOOP2 END
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 2 [ rsp ssp  ]
+ Available : 20 [ zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 6 [ rbp rbx r12 r13 r14 r15  ]
+ Assigned : 16 [ eflags rax rbp rbx rcx rdi rdx rsi r8 r9 r10 r11 r12 r13 r14 r15  ]
+
+Routine stack 
+ Variables : 104 Bytes
+   Read Count : 50
+   Write Count : 22
+ Spills : 164 Bytes
+   Read Count : 50
+   Write Count : 22
+
+FUNCTION END
+Register allocation report for: stbi_write_png_to_mem
+FUNCTION BEGIN
+ 11 reloads 14 spills 
+ LOOP1 BEGIN at (./stb_image_write.h:964:4 @[ ./stb_image_write.h:975:23 @[ ./stb_image_write.h:1096:4 ] ])
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:964:4 @[ ./stb_image_write.h:975:23 @[ ./stb_image_write.h:1096:4 ] ])
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:1039:4)
+  12 reloads 1 spills 
+  LOOP2 BEGIN at (./stb_image_write.h:1046:10)
+   7 reloads 
+   LOOP3 BEGIN at (./stb_image_write.h:1051:13)
+   LOOP3 END
+   LOOP3 BEGIN at (./stb_image_write.h:1051:13)
+   LOOP3 END
+  LOOP2 END
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 3 [ rip rsp ssp  ]
+ Available : 12 [ zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 6 [ rbp rbx r12 r13 r14 r15  ]
+ Assigned : 24 [ eflags rax rbp rbx rcx rdi rdx rsi r8 r9 r10 r11 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7  ]
+
+Routine stack 
+ Variables : 88 Bytes
+   Read Count : 31
+   Write Count : 15
+ Spills : 92 Bytes
+   Read Count : 30
+   Write Count : 15
+
+FUNCTION END
+Register allocation report for: stbiw__encode_png_line
+FUNCTION BEGIN
+ 14 reloads 16 spills 
+ LOOP1 BEGIN at (./stb_image_write.h:1008:4)
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:1008:4)
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:1008:4)
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:1008:4)
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:1008:4)
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:1008:4)
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:1008:4)
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:1008:4)
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:1008:4)
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:1008:4)
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:1008:4)
+  1 reloads 
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:1008:4)
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:1008:4)
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:1008:4)
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:1008:4)
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:1008:4)
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:997:4)
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:997:4)
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:997:4)
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:997:4)
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:997:4)
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:997:4)
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:997:4)
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:997:4)
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:997:4)
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:997:4)
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:997:4)
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:997:4)
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:997:4)
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:997:4)
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 3 [ rip rsp ssp  ]
+ Available : 8 [ zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 6 [ rbp rbx r12 r13 r14 r15  ]
+ Assigned : 28 [ eflags rax rbp rbx rcx rdi rdx rsi r8 r9 r10 r11 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11  ]
+
+Routine stack 
+ Variables : 40 Bytes
+   Read Count : 19
+   Write Count : 16
+ Spills : 65 Bytes
+   Read Count : 15
+   Write Count : 16
+
+FUNCTION END
+Register allocation report for: stbi_write_png
+FUNCTION BEGIN
+
+Hardware registers used
+ Reserved : 2 [ rsp ssp  ]
+ Available : 24 [ r11 r12 r13 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 2 [ r14 rbx  ]
+ Assigned : 12 [ eflags rax rbp rbx rcx rdi rdx rsi r8 r9 r10 r14  ]
+
+Routine stack 
+ Variables : 4 Bytes
+   Read Count : 1
+   Write Count : 0
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: stbi_write_png_to_func
+FUNCTION BEGIN
+
+Hardware registers used
+ Reserved : 2 [ rsp ssp  ]
+ Available : 26 [ rbp r10 r11 r12 r13 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 2 [ r14 rbx  ]
+ Assigned : 10 [ eflags rax rbx rcx rdi rdx rsi r8 r9 r14  ]
+
+Routine stack 
+ Variables : 8 Bytes
+   Read Count : 2
+   Write Count : 0
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: stbi_write_jpg_to_func
+FUNCTION BEGIN
+
+Hardware registers used
+ Reserved : 2 [ rsp ssp  ]
+ Available : 28 [ rbp rbx r10 r11 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 0 [  ]
+ Assigned : 8 [ eflags rax rcx rdi rdx rsi r8 r9  ]
+
+Routine stack 
+ Variables : 20 Bytes
+   Read Count : 1
+   Write Count : 2
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: stbi_write_jpg_core
+FUNCTION BEGIN
+ 5 reloads 11 spills 
+ LOOP1 BEGIN at (./stb_image_write.h:1374:4)
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:1422:7)
+  2 reloads 
+  LOOP2 BEGIN at (./stb_image_write.h:1423:10)
+   7 reloads 3 spills 
+   LOOP3 BEGIN at (./stb_image_write.h:1425:13)
+    5 reloads 
+    LOOP4 BEGIN at (./stb_image_write.h:1426:16)
+     1 reloads 
+    LOOP4 END
+   LOOP3 END
+  LOOP2 END
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:1154:4 @[ ./stb_image_write.h:1452:7 ])
+  2 reloads 
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 4 [ rip rsp ssp mxcsr  ]
+ Available : 4 [ k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 4 [ r14 r13 rbx rbp  ]
+ Assigned : 32 [ eflags rax rbp rbx rcx rdi rdx rsi r8 r9 r10 r11 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15  ]
+
+Routine stack 
+ Variables : 1508 Bytes
+   Read Count : 136
+   Write Count : 74
+ Spills : 100 Bytes
+   Read Count : 22
+   Write Count : 14
+
+FUNCTION END
+Register allocation report for: stbiw__jpg_processDU
+FUNCTION BEGIN
+ 16 reloads 10 spills 
+ LOOP1 BEGIN at (./stb_image_write.h:1232:4)
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:1240:4)
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:1259:4)
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:1154:4 @[ ./stb_image_write.h:1263:7 ])
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:1154:4 @[ ./stb_image_write.h:1285:7 ])
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:1266:4)
+  14 reloads 6 spills 
+  LOOP2 BEGIN at (./stb_image_write.h:1270:7)
+  LOOP2 END
+  LOOP2 BEGIN at (./stb_image_write.h:1276:10)
+   5 reloads 
+   LOOP3 BEGIN at (./stb_image_write.h:1154:4 @[ ./stb_image_write.h:1277:13 ])
+   LOOP3 END
+  LOOP2 END
+  LOOP2 BEGIN at (./stb_image_write.h:1154:4 @[ ./stb_image_write.h:1281:7 ])
+  LOOP2 END
+  LOOP2 BEGIN at (./stb_image_write.h:1154:4 @[ ./stb_image_write.h:1282:7 ])
+  LOOP2 END
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:1154:4 @[ ./stb_image_write.h:1250:7 ])
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:1154:4 @[ ./stb_image_write.h:1255:7 ])
+ LOOP1 END
+ LOOP1 BEGIN at (./stb_image_write.h:1154:4 @[ ./stb_image_write.h:1254:7 ])
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 4 [ rip mxcsr rsp ssp  ]
+ Available : 5 [ r11 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 6 [ rbp rbx r12 r13 r14 r15  ]
+ Assigned : 31 [ eflags rax rbp rbx rcx rdi rdx rsi r8 r9 r10 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15  ]
+
+Routine stack 
+ Variables : 353 Bytes
+   Read Count : 43
+   Write Count : 32
+ Spills : 88 Bytes
+   Read Count : 35
+   Write Count : 16
+
+FUNCTION END
+Register allocation report for: stbi_write_jpg
+FUNCTION BEGIN
+
+Hardware registers used
+ Reserved : 2 [ rsp ssp  ]
+ Available : 22 [ r10 r11 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 2 [ r14 r12  ]
+ Assigned : 14 [ eflags rax rbp rbx rcx rdi rdx rsi r8 r9 r12 r13 r14 r15  ]
+
+Routine stack 
+ Variables : 16 Bytes
+   Read Count : 0
+   Write Count : 2
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: write_png
+FUNCTION BEGIN
+ 2 reloads 2 spills 
+ LOOP1 BEGIN at (heat.c:139:2)
+  1 reloads 1 spills 
+  LOOP2 BEGIN at (heat.c:140:3)
+   2 reloads 2 spills 
+  LOOP2 END
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 4 [ rsp ssp rip mxcsr  ]
+ Available : 18 [ r10 r11 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 5 [ rbx r12 r13 r14 r15  ]
+ Assigned : 18 [ eflags rax rbp rbx rcx rdi rdx rsi r8 r9 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3  ]
+
+Routine stack 
+ Variables : 128 Bytes
+   Read Count : 6
+   Write Count : 5
+ Spills : 28 Bytes
+   Read Count : 5
+   Write Count : 5
+
+FUNCTION END
+Register allocation report for: main
+FUNCTION BEGIN
+ 7 reloads 7 spills 
+ LOOP1 BEGIN at (heat.c:60:2 @[ heat.c:174:2 ])
+ LOOP1 END
+ LOOP1 BEGIN at (heat.c:64:2 @[ heat.c:174:2 ])
+ LOOP1 END
+ LOOP1 BEGIN at (heat.c:184:2)
+  5 reloads 1 spills 
+  LOOP2 BEGIN at (heat.c:90:5 @[ heat.c:200:3 ])
+   LOOP3 BEGIN at (heat.c:91:9 @[ heat.c:200:3 ])
+   LOOP3 END
+  LOOP2 END
+  LOOP2 BEGIN at (heat.c:124:5 @[ heat.c:201:25 ])
+   LOOP3 BEGIN at (heat.c:125:9 @[ heat.c:201:25 ])
+   LOOP3 END
+  LOOP2 END
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 4 [ mxcsr rsp ssp rip  ]
+ Available : 15 [ r11 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 5 [ rbx r12 r13 r14 r15  ]
+ Assigned : 21 [ eflags rax rbp rbx rcx rdi rdx rsi r8 r9 r10 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5  ]
+
+Routine stack 
+ Variables : 64 Bytes
+   Read Count : 26
+   Write Count : 13
+ Spills : 52 Bytes
+   Read Count : 12
+   Write Count : 8
+
+FUNCTION END
