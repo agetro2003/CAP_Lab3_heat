@@ -67,22 +67,7 @@ static void init(unsigned int source_x, unsigned int source_y, float * matrix) {
 	}
 }
 
-/*
-static void step(unsigned int source_x, unsigned int source_y, const float * current, float * next) {
 
-	for (unsigned int y = 1; y < N-1; ++y) {
-		for (unsigned int x = 1; x < N-1; ++x) {
-			if ((y == source_y) && (x == source_x)) {
-				continue;
-			}
-			next[idx(x, y, N)] = (current[idx(x, y-1, N)] +
-			current[idx(x-1, y, N)] +
-			current[idx(x+1, y, N)] +
-			current[idx(x, y+1, N)]) / 4.0f;
-		}
-	}
-}
-*/
 static void step(unsigned int source_x, unsigned int source_y, const float * local_current, float * local_next, unsigned int local_N, int world_rank, int world_size) {
     unsigned int start_y = (world_rank == 0) ? 2 : 1; // Si es el primer proceso, empieza en la fila 2 (evita fila 1)
     unsigned int end_y = (world_rank == world_size - 1) ? local_N - 1 : local_N; // Si es el último proceso, detente en local_N-1
@@ -104,16 +89,6 @@ static void step(unsigned int source_x, unsigned int source_y, const float * loc
 }
 
 
-/*
-static float diff(const float * current, const float * next) {
-	float maxdiff = 0.0f;
-	for (unsigned int y = 1; y < N-1; ++y) {
-		for (unsigned int x = 1; x < N-1; ++x) {
-			maxdiff = fmaxf(maxdiff, fabsf(next[idx(x, y, N)] - current[idx(x, y, N)]));
-		}
-	}
-	return maxdiff;
-}*/
 static float diff(const float * current, const float * next, unsigned int local_N, int world_rank, int world_size) {
     float maxdiff = 0.0f;
 
@@ -156,25 +131,37 @@ int main() {
 
 	int world_rank;
 	MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
-	printf("%d of %d ", world_rank, world_size);
-	size_t array_size = N * N * sizeof(float);
+	unsigned int source_x;
+	unsigned int source_y;
+	
+	size_t array_size;
 
-	float * current = malloc(array_size);
-	float * next = malloc(array_size);
+	float * current;
+	float * next;
+	if (world_rank == 0)
+	{
+		array_size = N * N * sizeof(float);
+		current = malloc(array_size);
+		next = malloc(array_size);
+		srand(0);
+		source_x = rand() % (N-2) + 1;
+		source_y = rand() % (N-2) + 1;
+		init(source_x, source_y, current);
+		memcpy(next, current, array_size);
+		printf("source value: %f\n", current[idx(source_x, source_y, N)]);
+	}
+	MPI_Bcast(&source_x, 1, MPI_INT, 0, MPI_COMM_WORLD);
+	MPI_Bcast(&source_y, 1, MPI_INT, 0, MPI_COMM_WORLD);
 
-	srand(0);
-	unsigned int source_x = rand() % (N-2) + 1;
-	unsigned int source_y = rand() % (N-2) + 1;
 	printf("Heat source at (%u, %u)\n", source_x, source_y);
+
+	
+
+
 	unsigned int local_N = N/world_size;
 	unsigned int local_start = world_rank*local_N;
 	float * local_current = malloc(((local_N + 2) * N) * sizeof(float));
 	float * local_next = malloc(((local_N + 2) * N) * sizeof(float));
-
-	init(source_x, source_y, current);
-	memcpy(next, current, array_size);
-	printf("source value: %f\n", current[idx(source_x, source_y, N)]);
-
 	// Scatter the data
 	MPI_Scatter(current, local_N * N, MPI_FLOAT, local_current + N, local_N * N, MPI_FLOAT, 0, MPI_COMM_WORLD);
 	MPI_Scatter(next, local_N * N, MPI_FLOAT, local_next + N, local_N * N, MPI_FLOAT, 0, MPI_COMM_WORLD);
@@ -182,9 +169,6 @@ int main() {
 	double start = omp_get_wtime();
 	float global_t_diff = SOURCE_TEMP;
 	for (unsigned int it = 0; (it < MAX_ITERATIONS) && (global_t_diff > MIN_DELTA); ++it) {
-		if(world_rank == 1 && it == 127){
-			printf("iteracion %d\n", it);
-		}
 		// Exchange the data
 		if (world_rank > 0) {
 			MPI_Send(local_current + N, N, MPI_FLOAT, world_rank - 1, 0, MPI_COMM_WORLD);
@@ -208,25 +192,20 @@ int main() {
 		local_next = swap;
 		//Get Minimum of all the local_t_diff
 		MPI_Allreduce(&local_t_diff, &global_t_diff, 1, MPI_FLOAT, MPI_MIN, MPI_COMM_WORLD);
-		if (world_rank == 0 && it % 1000 == 0) {
-			printf("iter %d: %f\n", it, global_t_diff);
-		}
 	}
 
 	// Gather the data
 	MPI_Gather(local_current + N, local_N * N, MPI_FLOAT, current, local_N * N, MPI_FLOAT, 0, MPI_COMM_WORLD);
 	
 	double stop = omp_get_wtime();
-	printf("Computing time %f s.\n", stop-start);/*
-	if (world_rank == 1){
-		print_local_matrix(local_current, local_N);
-	}*/
-	
+	if(world_rank == 0) {
+	printf("Computing time %f s.\n", stop-start);
 	write_png(current, MAX_ITERATIONS);
-
 	free(current);
 	free(next);
+	}
 
+	
 	MPI_Finalize();
 	return 0;
 }
